@@ -25,7 +25,7 @@ const WorkerDashboard = ({ username }: WorkerDashboardProps) => {
     daysWorked: 18,
     totalDays: 20,
     totalHours: 144,
-    estimatedPay: 2880 // $20/hour * 144 hours
+    estimatedPay: 57600 // ₹400/hour * 144 hours
   };
 
   const handleMarkAttendance = () => {
@@ -83,7 +83,7 @@ const WorkerDashboard = ({ username }: WorkerDashboardProps) => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Est. Pay</p>
-                <p className="text-2xl font-bold">${monthlyStats.estimatedPay}</p>
+                <p className="text-2xl font-bold">₹{monthlyStats.estimatedPay.toLocaleString()}</p>
               </div>
             </div>
           </CardContent>

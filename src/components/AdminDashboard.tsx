@@ -16,11 +16,11 @@ const AdminDashboard = ({ username }: AdminDashboardProps) => {
 
   // Mock data - in real app this would come from backend
   const workers = [
-    { id: 1, name: 'John Smith', department: 'Production', rate: 20, daysWorked: 18, totalHours: 144, status: 'present' },
-    { id: 2, name: 'Sarah Johnson', department: 'Quality Control', rate: 22, daysWorked: 20, totalHours: 160, status: 'present' },
-    { id: 3, name: 'Mike Davis', department: 'Packaging', rate: 18, daysWorked: 15, totalHours: 120, status: 'absent' },
-    { id: 4, name: 'Lisa Chen', department: 'Maintenance', rate: 25, daysWorked: 19, totalHours: 152, status: 'present' },
-    { id: 5, name: 'Robert Wilson', department: 'Logistics', rate: 21, daysWorked: 17, totalHours: 136, status: 'present' },
+    { id: 1, name: 'John Smith', department: 'Production', rate: 400, daysWorked: 18, totalHours: 144, status: 'present' },
+    { id: 2, name: 'Sarah Johnson', department: 'Quality Control', rate: 440, daysWorked: 20, totalHours: 160, status: 'present' },
+    { id: 3, name: 'Mike Davis', department: 'Packaging', rate: 360, daysWorked: 15, totalHours: 120, status: 'absent' },
+    { id: 4, name: 'Lisa Chen', department: 'Maintenance', rate: 500, daysWorked: 19, totalHours: 152, status: 'present' },
+    { id: 5, name: 'Robert Wilson', department: 'Logistics', rate: 420, daysWorked: 17, totalHours: 136, status: 'present' },
   ];
 
   const todayAttendance = [
@@ -93,7 +93,7 @@ const AdminDashboard = ({ username }: AdminDashboardProps) => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Total Payroll</p>
-                <p className="text-2xl font-bold">${totalStats.totalPayroll.toLocaleString()}</p>
+                <p className="text-2xl font-bold">₹{totalStats.totalPayroll.toLocaleString()}</p>
               </div>
             </div>
           </CardContent>
@@ -188,11 +188,11 @@ const AdminDashboard = ({ username }: AdminDashboardProps) => {
                   <TableRow key={worker.id} className="hover:bg-muted/50">
                     <TableCell className="font-medium">{worker.name}</TableCell>
                     <TableCell>{worker.department}</TableCell>
-                    <TableCell>${worker.rate}/hr</TableCell>
+                    <TableCell>₹{worker.rate}/hr</TableCell>
                     <TableCell>{worker.daysWorked}</TableCell>
                     <TableCell>{worker.totalHours}h</TableCell>
                     <TableCell className="font-medium text-success">
-                      ${(worker.totalHours * worker.rate).toLocaleString()}
+                      ₹{(worker.totalHours * worker.rate).toLocaleString()}
                     </TableCell>
                     <TableCell>
                       <Badge variant={worker.status === 'present' ? "default" : "destructive"}>
