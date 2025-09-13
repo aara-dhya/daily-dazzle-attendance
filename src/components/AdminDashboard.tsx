@@ -16,19 +16,19 @@ const AdminDashboard = ({ username }: AdminDashboardProps) => {
 
   // Mock data - in real app this would come from backend
   const workers = [
-    { id: 1, name: 'John Smith', department: 'Production', rate: 400, daysWorked: 18, totalHours: 144, status: 'present' },
-    { id: 2, name: 'Sarah Johnson', department: 'Quality Control', rate: 440, daysWorked: 20, totalHours: 160, status: 'present' },
-    { id: 3, name: 'Mike Davis', department: 'Packaging', rate: 360, daysWorked: 15, totalHours: 120, status: 'absent' },
-    { id: 4, name: 'Lisa Chen', department: 'Maintenance', rate: 500, daysWorked: 19, totalHours: 152, status: 'present' },
-    { id: 5, name: 'Robert Wilson', department: 'Logistics', rate: 420, daysWorked: 17, totalHours: 136, status: 'present' },
+    { id: 1, name: 'Worker_X7K9', department: 'Production', rate: 400, daysWorked: 18, totalHours: 144, status: 'present' },
+    { id: 2, name: 'User_M3R8', department: 'Quality Control', rate: 440, daysWorked: 20, totalHours: 160, status: 'present' },
+    { id: 3, name: 'Emp_Q5T2', department: 'Packaging', rate: 360, daysWorked: 15, totalHours: 120, status: 'absent' },
+    { id: 4, name: 'Staff_L9W4', department: 'Maintenance', rate: 500, daysWorked: 19, totalHours: 152, status: 'present' },
+    { id: 5, name: 'Team_R6P1', department: 'Logistics', rate: 420, daysWorked: 17, totalHours: 136, status: 'present' },
   ];
 
   const todayAttendance = [
-    { worker: 'John Smith', checkIn: '08:45', status: 'present' },
-    { worker: 'Sarah Johnson', checkIn: '09:00', status: 'present' },
-    { worker: 'Mike Davis', checkIn: null, status: 'absent' },
-    { worker: 'Lisa Chen', checkIn: '08:30', status: 'present' },
-    { worker: 'Robert Wilson', checkIn: '09:15', status: 'present' },
+    { worker: 'Worker_X7K9', checkIn: '08:45', status: 'present' },
+    { worker: 'User_M3R8', checkIn: '09:00', status: 'present' },
+    { worker: 'Emp_Q5T2', checkIn: null, status: 'absent' },
+    { worker: 'Staff_L9W4', checkIn: '08:30', status: 'present' },
+    { worker: 'Team_R6P1', checkIn: '09:15', status: 'present' },
   ];
 
   const totalStats = {

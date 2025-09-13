@@ -121,7 +121,7 @@ const LoginForm = ({ onLogin }: LoginFormProps) => {
 
         <div className="text-center mt-6 text-sm text-muted-foreground">
           <p>Demo Credentials:</p>
-          <p>Worker: john/password | Admin: admin/admin123</p>
+          <p>Worker: demo_user/password | Admin: admin/admin123</p>
         </div>
       </div>
     </div>
